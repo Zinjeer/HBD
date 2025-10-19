@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <title>birthday-card</title>
+    <style>
+      body {
+        font-family: "Segoe UI", sans-serif;
+        text-align: center;
+        background: linear-gradient(to right, #ffdde1, #ee9ca7);
+        padding-top: 50px;
+      }
+
+      h1 {
+        color: #fff;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+      }
+
+      #card {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all 0.6s ease;
+        margin: 30px auto;
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        width: 80%;
+        max-width: 400px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      #card.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      button {
+        padding: 12px 25px;
+        font-size: 18px;
+        background-color: #ff69b4;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #ff85c1;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🎁 กดเพื่ออ่าน 🎉</h1>
+    <button onclick="openCard()">openCard</button>
+
+    <div id="card">
+      <h2>Happy Birthdayนะคับน้องพลอย 💖</h2>
+      <p>
+        ขอวันเกิดปีนี้น้องพลอยมีความสุขมากๆนะคับ
+        ดีใจที่ได้เจอน้องพลอยเป็นสายรหัสของพี่คับ ไว้ว่างๆเจอกันคับ
+      </p>
+    </div>
+
+    <script>
+      function openCard() {
+        const card = document.getElementById("card");
+        card.classList.add("show");
+      }
+    </script>
+  </body>
+</html>
